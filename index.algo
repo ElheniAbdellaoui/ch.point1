@@ -1,0 +1,18 @@
+ALGORITHM checkpoint1
+VAR
+    nv,l,i:=0
+    st:STRING
+    nw:=1
+BEGIN
+    WHILE (st[i]<>".") DO
+    l++
+    IF (st[i]=" ") THEN
+        nw:=nw+1
+    END_IF
+    IF (st[i] in ["a","A","e";"E","i","I","u","U","o","O","y","Y"]) THEN
+        nv:=nv+1
+    END_IF
+     i:=i+1
+    END_WHILE
+    Write("Those are the number of characters, words and vowels",l,nw,nv)
+END
